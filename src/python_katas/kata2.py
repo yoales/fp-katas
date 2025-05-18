@@ -1,0 +1,18 @@
+"""
+Kata 2: Basic filter operation
+Difficulty: 2/10
+
+Task: Filter even numbers from a list using filter
+"""
+
+def filter_even_numbers(numbers: list[int]) -> list[int]:
+    """
+    Filter even numbers from the input list using filter.
+    
+    Args:
+        numbers: List of integers
+        
+    Returns:
+        List of even integers
+    """
+    # TODO: Implement the function
