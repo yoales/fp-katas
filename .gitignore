@@ -2,3 +2,4 @@ src_solutions/
 venv/
 src/python_katas/__pycache__/*
 tests/__pycache__/*
+src/python_katas.egg-info/PKG-INFO
