@@ -67,6 +67,8 @@ Clone the repository and install in editable mode:
 ```bash
 git clone https://github.com/yourusername/fp-katas.git
 cd fp-katas
+python3 -m venv venv
+source venv/bin/activate
 pip install -e .
 pip install pytest
 ```
