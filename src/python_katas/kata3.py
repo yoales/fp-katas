@@ -18,4 +18,5 @@ def sum_numbers(numbers: List[int]) -> int:
     Returns:
         Sum of all integers
     """
+    # Method signature: reduce(function, iterable[, initializer]) -> value
     # TODO: Implement the function

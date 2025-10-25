@@ -28,4 +28,5 @@ def process_numbers(numbers: List[int]) -> int:
     Returns:
         Sum of processed numbers
     """
+    # Method signatures: filter(function, iterable) -> filter object, map(function, iterable) -> map object, reduce(function, iterable[, initializer]) -> value
     # TODO: Implement the function

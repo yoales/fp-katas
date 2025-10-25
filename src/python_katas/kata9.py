@@ -21,6 +21,7 @@ def curry(func: Callable[[T, T], R]) -> Callable[[T], Callable[[T], R]]:
     Returns:
         Curried function that takes one argument at a time
     """
+    # Method signature: curry(f)(x)(y) = f(x, y)
     # TODO: Implement the function
 
 def create_multiplier(factor: int) -> Callable[[int], int]:
@@ -46,4 +47,5 @@ def apply_multiplier(numbers: List[int], factor: int) -> List[int]:
     Returns:
         List of multiplied integers
     """
+    # Method signature: map(function, iterable) -> map object
     # TODO: Implement the function

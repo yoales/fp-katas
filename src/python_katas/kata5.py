@@ -18,4 +18,5 @@ def double_even_numbers(numbers: List[int]) -> List[int]:
     Returns:
         List of doubled even integers
     """
+    # Method signatures: filter(function, iterable) -> filter object, map(function, iterable) -> map object
     # TODO: Implement the function
