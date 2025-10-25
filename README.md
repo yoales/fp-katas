@@ -109,7 +109,3 @@ print(double_numbers([1, 2, 3]))  # Output: [2, 4, 6]
 ## Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests to add new katas, improve documentation, or enhance tests.
-
-## License
-
-This project is licensed under the MIT License.
