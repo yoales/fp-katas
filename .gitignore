@@ -1,3 +1,4 @@
 src_solutions/
 venv/
 src/python_katas/__pycache__/*
+tests/__pycache__/*
