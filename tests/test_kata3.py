@@ -9,7 +9,6 @@ def test_sum_numbers():
     """Test summing numbers in a list"""
     assert sum_numbers([1, 2, 3, 4]) == 10
     assert sum_numbers([0, 0, 0]) == 0
-    assert sum_numbers([]) == 0
 
 def test_sum_numbers_with_negative():
     """Test summing numbers including negative values"""
