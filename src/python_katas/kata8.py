@@ -32,5 +32,10 @@ def apply_composition(numbers: List[int]) -> List[int]:
     Returns:
         List of processed integers
     """
+
+    double = lambda x: x * 2
+    square = lambda x: x ** 2
+    add_one = lambda x: x + 1
+
     # Method signature: map(function, iterable) -> map object
     # TODO: Implement the function

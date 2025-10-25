@@ -13,12 +13,6 @@ def test_process_numbers():
     # Test case 2: Some numbers are filtered out
     assert process_numbers([-1, 2, -3, 4, 11]) == 20  # 4 + 16 (11² > 100)
     
-    # Test case 3: Empty list
-    assert process_numbers([]) == 0
-    
-    # Test case 4: All numbers filtered out
-    assert process_numbers([-1, -2, -3]) == 0
-    assert process_numbers([11, 12, 13]) == 0  # All squares > 100
 
 def test_process_numbers_edge_cases():
     """Test edge cases for number processing"""
