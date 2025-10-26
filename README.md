@@ -85,6 +85,12 @@ Run all tests using `pytest`:
 pytest
 ```
 
+You can also run an isolated test using `pytest {test_file.py}`:
+
+```bash
+pytest tests/test_kata1.py
+```
+
 ## Katas Overview
 
 Each kata is a Python module with a specific functional programming challenge. Corresponding tests are provided in the `tests/` directory.
