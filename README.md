@@ -65,11 +65,15 @@ python_katas/
 Clone the repository and install in editable mode:
 
 ```bash
+# Clone repository
 git clone https://github.com/yourusername/fp-katas.git
 cd fp-katas
+# Create virtualenv
 python3 -m venv venv
 source venv/bin/activate
+# Install current package in editable mode
 pip install -e .
+# Install pytest
 pip install pytest
 ```
 
