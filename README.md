@@ -66,7 +66,7 @@ Clone the repository and install in editable mode:
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/fp-katas.git
+git clone https://github.com/jjordana/fp-katas.git
 cd fp-katas
 # Create virtualenv
 python3 -m venv venv
