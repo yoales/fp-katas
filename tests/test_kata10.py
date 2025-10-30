@@ -1,23 +1,33 @@
 """
-Tests for Kata 10: Complex functional operations
+Tests for Kata 10: Currying
 """
 
 import pytest
-from python_katas.kata10 import process_numbers
+from python_katas.kata10 import curry, create_multiplier, apply_multiplier
 
-def test_process_numbers():
-    """Test processing numbers with multiple operations"""
-    # Test case 1: All numbers are processed
-    assert process_numbers([1, 2, 3, 4, 5]) == 55  # 1 + 4 + 9 + 16 + 25
-    
-    # Test case 2: Some numbers are filtered out
-    assert process_numbers([-1, 2, -3, 4, 11]) == 20  # 4 + 16 (11² > 100)
-    
+def test_curry():
+    """Test currying a function"""
+    add = lambda x, y: x + y
+    curried_add = curry(add)
+    add_five = curried_add(5)
+    assert add_five(3) == 8
+    assert add_five(10) == 15
 
-def test_process_numbers_edge_cases():
-    """Test edge cases for number processing"""
-    # Test case 1: Numbers exactly at boundaries
-    # assert process_numbers([0, 10, 11]) == 100  # 0 filtered, 10² = 100, 11² > 100
-    
-    # Test case 2: Mix of positive and negative numbers
-    # assert process_numbers([-5, 5, -10, 10]) == 125  # 25 + 100 
+def test_create_multiplier():
+    """Test creating a multiplier function"""
+    double = create_multiplier(2)
+    assert double(4) == 8
+    assert double(5) == 10
+
+def test_apply_multiplier():
+    """Test applying a multiplier to a list"""
+    assert apply_multiplier([1, 2, 3], 2) == [2, 4, 6]
+    assert apply_multiplier([1, 2, 3], 3) == [3, 6, 9]
+    assert apply_multiplier([], 2) == []
+
+def test_curry_with_different_types():
+    """Test currying with different types"""
+    concat = lambda x, y: str(x) + str(y)
+    curried_concat = curry(concat)
+    add_hello = curried_concat("Hello, ")
+    assert add_hello("World") == "Hello, World" 

@@ -1,51 +1,32 @@
 """
-Kata 9: Currying
+Kata 9: Complex functional operations
 Difficulty: 9/10
 
-Task: Create a function that demonstrates currying by creating specialized
-functions from a general function
+Task: Create a function that combines multiple functional programming concepts
+to process a list of numbers
 """
 
-from typing import Callable, TypeVar, List
+from functools import reduce
+from typing import List, Callable, TypeVar
 
 T = TypeVar('T')
 R = TypeVar('R')
 
-def curry(func: Callable[[T, T], R]) -> Callable[[T], Callable[[T], R]]:
+def process_numbers(numbers: List[int]) -> int:
     """
-    Curry a function that takes two arguments.
+    Process a list of numbers using multiple functional programming concepts.
     
-    Args:
-        func: Function to curry
-        
-    Returns:
-        Curried function that takes one argument at a time
-    """
-    # Method signature: curry(f)(x)(y) = f(x, y)
-    # TODO: Implement the function
-
-def create_multiplier(factor: int) -> Callable[[int], int]:
-    """
-    Create a function that multiplies its input by a factor.
-    
-    Args:
-        factor: Number to multiply by
-        
-    Returns:
-        Function that multiplies its input by the factor
-    """
-    # TODO: Implement the function
-
-def apply_multiplier(numbers: List[int], factor: int) -> List[int]:
-    """
-    Apply a multiplier to each number in the list.
+    The function:
+    1. Filters out negative numbers
+    2. Squares the remaining numbers
+    3. Filters out numbers greater than 100
+    4. Sums the remaining numbers
     
     Args:
         numbers: List of integers
-        factor: Number to multiply by
         
     Returns:
-        List of multiplied integers
+        Sum of processed numbers
     """
-    # Method signature: map(function, iterable) -> map object
+    # Method signatures: filter(function, iterable) -> filter object, map(function, iterable) -> map object, reduce(function, iterable[, initializer]) -> value
     # TODO: Implement the function
