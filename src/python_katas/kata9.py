@@ -28,5 +28,9 @@ def process_numbers(numbers: List[int]) -> int:
     Returns:
         Sum of processed numbers
     """
+    returned_numbers = filter(lambda x: x >= 0, numbers)
+    squared_numbers = map(lambda x: x ** 2, returned_numbers)
+    filtered_numbers = filter(lambda x: x <= 100, squared_numbers)
+    return reduce(lambda x, y: x + y, filtered_numbers)
     # Method signatures: filter(function, iterable) -> filter object, map(function, iterable) -> map object, reduce(function, iterable[, initializer]) -> value
     # TODO: Implement the function
