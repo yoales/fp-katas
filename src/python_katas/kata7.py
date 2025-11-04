@@ -24,3 +24,5 @@ def apply_function(func: Callable[[T], R], items: List[T]) -> List[R]:
     """
     # Method signature: map(function, iterable) -> map object
     # TODO: Implement the function
+    result = map(func, items)
+    return list(result)
