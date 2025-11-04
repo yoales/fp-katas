@@ -23,6 +23,7 @@ def curry(func: Callable[[T, T], R]) -> Callable[[T], Callable[[T], R]]:
     """
     # Method signature: curry(f)(x)(y) = f(x, y)
     # TODO: Implement the function
+    return lambda x: lambda y: func(x, y)
 
 def create_multiplier(factor: int) -> Callable[[int], int]:
     """
@@ -35,6 +36,7 @@ def create_multiplier(factor: int) -> Callable[[int], int]:
         Function that multiplies its input by the factor
     """
     # TODO: Implement the function
+    return lambda x: x*factor
 
 def apply_multiplier(numbers: List[int], factor: int) -> List[int]:
     """
@@ -49,3 +51,5 @@ def apply_multiplier(numbers: List[int], factor: int) -> List[int]:
     """
     # Method signature: map(function, iterable) -> map object
     # TODO: Implement the function
+    curr = create_multiplier(factor)
+    return list(map(lambda x: curr(x), numbers))
