@@ -8,6 +8,9 @@ Task: Sum all numbers in a list using reduce
 from functools import reduce
 from typing import List
 
+def sum_number(x, y):
+    return x + y
+
 def sum_numbers(numbers: List[int]) -> int:
     """
     Sum all numbers in the input list using reduce.
@@ -20,3 +23,4 @@ def sum_numbers(numbers: List[int]) -> int:
     """
     # Method signature: reduce(function, iterable[, initializer]) -> value
     # TODO: Implement the function
+    return reduce(sum_number, numbers)

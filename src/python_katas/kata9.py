@@ -12,6 +12,9 @@ from typing import List, Callable, TypeVar
 T = TypeVar('T')
 R = TypeVar('R')
 
+def sum_number(x, y):
+    return x + y
+
 def process_numbers(numbers: List[int]) -> int:
     """
     Process a list of numbers using multiple functional programming concepts.
@@ -28,5 +31,11 @@ def process_numbers(numbers: List[int]) -> int:
     Returns:
         Sum of processed numbers
     """
+    step1 = filter(lambda x: x > 0, numbers)
+    step2= map(lambda x: x*x, step1)
+    step3 = filter(lambda x: x<100, step2)
+    step4 = reduce(lambda x, y: x + y, step3)
+    return step4
+
     # Method signatures: filter(function, iterable) -> filter object, map(function, iterable) -> map object, reduce(function, iterable[, initializer]) -> value
     # TODO: Implement the function

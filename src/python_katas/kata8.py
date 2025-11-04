@@ -21,6 +21,12 @@ def compose(*functions: Callable[[T], T]) -> Callable[[T], T]:
     """
     # Method signature: compose(f, g)(x) = f(g(x))
     # TODO: Implement the function
+    def inner(x):
+        results = x
+        for func in functions:
+            results = func(results)
+        return results
+    return inner
 
 def apply_composition(numbers: List[int]) -> List[int]:
     """
@@ -39,3 +45,4 @@ def apply_composition(numbers: List[int]) -> List[int]:
 
     # Method signature: map(function, iterable) -> map object
     # TODO: Implement the function
+    return(list(map(compose(double,square,add_one),numbers)))
