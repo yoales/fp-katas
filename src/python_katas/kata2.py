@@ -17,3 +17,4 @@ def filter_even_numbers(numbers: list[int]) -> list[int]:
     """
     # Method signature: filter(function, iterable) -> filter object
     # TODO: Implement the function
+    return list(filter(lambda x: x % 2 == 0, numbers))

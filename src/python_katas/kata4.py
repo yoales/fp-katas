@@ -30,3 +30,4 @@ def square_numbers(numbers: List[int]) -> List[int]:
     square_func = create_square_function()
     # Method signature: map(function, iterable) -> map object
     # TODO: Implement the function
+    return list(map(square_func, numbers))
