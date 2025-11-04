@@ -20,3 +20,4 @@ def sum_numbers(numbers: List[int]) -> int:
     """
     # Method signature: reduce(function, iterable[, initializer]) -> value
     # TODO: Implement the function
+    return(int(reduce(lambda x, y: x+y, numbers)))

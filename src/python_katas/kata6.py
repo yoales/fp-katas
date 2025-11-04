@@ -20,3 +20,4 @@ def square_positive_numbers(numbers: List[int]) -> List[int]:
     """
     # Method signature: [expression for item in iterable if condition]
     # TODO: Implement the function
+    return list((n**2 for n in numbers if n>0))
