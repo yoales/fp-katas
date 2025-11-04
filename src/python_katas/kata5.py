@@ -20,3 +20,6 @@ def double_even_numbers(numbers: List[int]) -> List[int]:
     """
     # Method signatures: filter(function, iterable) -> filter object, map(function, iterable) -> map object
     # TODO: Implement the function
+    mid_result = filter(lambda x: x%2==0, numbers)
+    result = map(lambda x: x*2, mid_result)
+    return list(result)
