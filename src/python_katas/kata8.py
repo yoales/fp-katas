@@ -6,6 +6,7 @@ Task: Create a function that composes multiple functions together
 """
 
 from typing import List, Callable, TypeVar
+from functools import reduce
 
 T = TypeVar('T')
 
@@ -21,6 +22,9 @@ def compose(*functions: Callable[[T], T]) -> Callable[[T], T]:
     """
     # Method signature: compose(f, g)(x) = f(g(x))
     # TODO: Implement the function
+    if len(functions) == 1:
+        return functions[0]
+    return lambda x: functions[-1](compose(*functions[0:-1])(x))
 
 def apply_composition(numbers: List[int]) -> List[int]:
     """
@@ -39,3 +43,5 @@ def apply_composition(numbers: List[int]) -> List[int]:
 
     # Method signature: map(function, iterable) -> map object
     # TODO: Implement the function
+    return list(map(compose(double, square, add_one), numbers))
+    return list(map(compose([double, square, add_one]), numbers))
