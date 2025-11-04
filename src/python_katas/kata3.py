@@ -18,5 +18,8 @@ def sum_numbers(numbers: List[int]) -> int:
     Returns:
         Sum of all integers
     """
+    nums = reduce(lambda x, y: x+y, numbers)
+    
+    return nums
     # Method signature: reduce(function, iterable[, initializer]) -> value
     # TODO: Implement the function
