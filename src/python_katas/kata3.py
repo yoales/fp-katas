@@ -9,6 +9,7 @@ from functools import reduce
 from typing import List
 
 def sum_numbers(numbers: List[int]) -> int:
+    return reduce(lambda x, y: x + y, numbers)
     """
     Sum all numbers in the input list using reduce.
     

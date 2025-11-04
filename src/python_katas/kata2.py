@@ -6,6 +6,7 @@ Task: Filter even numbers from a list using filter
 """
 
 def filter_even_numbers(numbers: list[int]) -> list[int]:
+    return list(filter(lambda x: x % 2 == 0, numbers))
     """
     Filter even numbers from the input list using filter.
     

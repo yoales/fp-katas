@@ -6,6 +6,7 @@ Task: Double each number in a list using map
 """
 
 def double_numbers(numbers: list[int]) -> list[int]:
+    return list(map(lambda x: x * 2, numbers))
     """
     Double each number in the input list using map.
     
