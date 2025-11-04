@@ -30,3 +30,8 @@ def process_numbers(numbers: List[int]) -> int:
     """
     # Method signatures: filter(function, iterable) -> filter object, map(function, iterable) -> map object, reduce(function, iterable[, initializer]) -> value
     # TODO: Implement the function
+    filtered_positive_num = list(filter(lambda x: x > 0, numbers))
+    squared_num = list(map(lambda x: x ** 2, filtered_positive_num))
+    filtered_greater_num = list(filter(lambda x: x < 100, squared_num))
+    
+    return reduce(lambda x, y: x+y, filtered_greater_num)
