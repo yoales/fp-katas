@@ -28,5 +28,20 @@ def process_numbers(numbers: List[int]) -> int:
     Returns:
         Sum of processed numbers
     """
-    # Method signatures: filter(function, iterable) -> filter object, map(function, iterable) -> map object, reduce(function, iterable[, initializer]) -> value
-    # TODO: Implement the function
+    def filter_pos(x):
+        return x >= 0
+
+    def map_square(x):
+        return x * x
+
+    def filter_less(x):
+        return x <= 100
+    
+    def reduce_func(x, y):
+        return x + y
+
+    positive_numbers = filter(filter_pos, numbers)
+    squared_numbers = map(map_square, positive_numbers)
+    filtered_numbers = filter(filter_less, squared_numbers)
+    total_sum = reduce(reduce_func, filtered_numbers)
+    return total_sum

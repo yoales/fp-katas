@@ -19,8 +19,11 @@ def compose(*functions: Callable[[T], T]) -> Callable[[T], T]:
     Returns:
         A function that applies all functions in sequence
     """
-    # Method signature: compose(f, g)(x) = f(g(x))
-    # TODO: Implement the function
+    def composed_function(x):
+        for func in functions:
+            x = func(x)
+        return x
+    return composed_function
 
 def apply_composition(numbers: List[int]) -> List[int]:
     """
@@ -33,9 +36,15 @@ def apply_composition(numbers: List[int]) -> List[int]:
         List of processed integers
     """
 
-    double = lambda x: x * 2
-    square = lambda x: x ** 2
-    add_one = lambda x: x + 1
+    def double_func(x):
+        return x * 2
 
-    # Method signature: map(function, iterable) -> map object
-    # TODO: Implement the function
+    def square_func(x):
+        return x ** 2
+
+    def add_one_func(x):
+        return x + 1
+
+    composed_func = compose(double_func, square_func, add_one_func)
+    map_result = map(composed_func, numbers)
+    return list(map_result)

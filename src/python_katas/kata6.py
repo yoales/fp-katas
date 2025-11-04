@@ -18,5 +18,9 @@ def square_positive_numbers(numbers: List[int]) -> List[int]:
     Returns:
         List of squared positive integers
     """
-    # Method signature: [expression for item in iterable if condition]
-    # TODO: Implement the function
+    def filter_func(x):
+        return x > 0
+    def map_func(x):
+        return x * x
+    even_result = filter(filter_func, numbers)
+    return list(map(map_func, even_result))
