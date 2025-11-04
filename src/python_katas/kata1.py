@@ -16,4 +16,6 @@ def double_numbers(numbers: list[int]) -> list[int]:
         List of doubled integers
     """
     # Method signature: map(function, iterable) -> map object
-    # TODO: Implement the function
+    return list(map(lambda x: x+x, numbers))
+
+

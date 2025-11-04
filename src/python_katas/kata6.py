@@ -19,4 +19,4 @@ def square_positive_numbers(numbers: List[int]) -> List[int]:
         List of squared positive integers
     """
     # Method signature: [expression for item in iterable if condition]
-    # TODO: Implement the function
+    return [item**2 for item in numbers if item>0]
