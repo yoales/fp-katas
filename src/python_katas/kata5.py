@@ -17,6 +17,10 @@ def double_even_numbers(numbers: List[int]) -> List[int]:
         
     Returns:
         List of doubled even integers
+        
     """
+    even_numb = list(map(lambda x: x*2 ,filter(lambda x: x%2==0, numbers)))
     # Method signatures: filter(function, iterable) -> filter object, map(function, iterable) -> map object
     # TODO: Implement the function
+    
+    return even_numb
