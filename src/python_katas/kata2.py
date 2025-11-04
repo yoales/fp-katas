@@ -5,6 +5,7 @@ Difficulty: 2/10
 Task: Filter even numbers from a list using filter
 """
 
+
 def filter_even_numbers(numbers: list[int]) -> list[int]:
     """
     Filter even numbers from the input list using filter.
@@ -17,3 +18,5 @@ def filter_even_numbers(numbers: list[int]) -> list[int]:
     """
     # Method signature: filter(function, iterable) -> filter object
     # TODO: Implement the function
+    return list(filter(lambda x: x%2 == 0, numbers))
+
